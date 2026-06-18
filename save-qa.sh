@@ -80,3 +80,6 @@ git add "c-questions/${FILENAME}"
 git commit -m "Add Q&A: ${TITLE}" --no-verify --allow-empty-message 2>/dev/null
 
 echo "Committed to local git."
+
+# 自动推送到 GitHub（失败不影响，下次会一起推）
+git push origin master 2>/dev/null && echo "Pushed to GitHub." || true

@@ -25,3 +25,8 @@ done < "$QUEUE_FILE"
 > "$QUEUE_FILE"
 
 echo "Auto-saved $saved Q&A entries."
+
+# 自动推送到 GitHub
+if [ "$saved" -gt 0 ]; then
+  git push origin master 2>/dev/null && echo "Pushed to GitHub." || true
+fi
