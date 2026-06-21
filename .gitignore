@@ -2,3 +2,5 @@
 *.o
 tempCodeRunnerFile.*
 .vscode/
+.pending-save.jsonl
+*.tmp
